@@ -1,0 +1,21 @@
+import java.util.*;
+class CaesarCipher
+{
+    public static void main (String args[])
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Please enter text");
+        String txt = in.nextLine();
+        System.out.println("Please enter shift");
+        int s = in.nextInt();
+        String dec = "";
+        if(s>26)
+         s = s%26;
+        for(char c:txt.toCharArray())
+        {
+            c += s;
+            dec += c;
+        }
+        System.out.println(dec);
+    }
+}
